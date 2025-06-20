@@ -6,38 +6,38 @@ import { useEffect } from 'react';
 
     const ShopContext = createContext(null);
 
-    // const getDefaultCart = () =>{
-    //     let cart = {};
+    const getDefaultCart = () =>{
+        let cart = {};
         
-    //     for (let index = 0; index < all_product.length+1; index++) {
-    //         cart[index] = 0;
-    //     }
+        for (let index = 0; index < all_product.length+1; index++) {
+            cart[index] = 0;
+        }
         
-    //     return cart;
-    // }
+        return cart;
+    }
 
 
     const ShopContextProvider = (props) => {
 
-        // const [cartItems, setCartItems] = useState(getDefaultCart);
+        const [cartItems, setCartItems] = useState(getDefaultCart);
 
-         const [cartItems, setCartItems] = useState(()=> {
-              let cart = {};
+        //  const [cartItems, setCartItems] = useState(()=> {
+        //       let cart = {};
         
-            for (let index = 0; index < all_product.length+1; index++) {
-                cart[index] = 0;
-                try {
-             const storedContents = localStorage.getItem('myItems');
-             return storedContents ? JSON.parse(storedContents): [];
+        //     for (let index = 0; index < all_product.length+1; index++) {
+        //         cart[index] = 0;
+        //         try {
+        //      const storedContents = localStorage.getItem('myItems');
+        //      return storedContents ? JSON.parse(storedContents): [];
             
-            } catch (error) {
-                console.error("Failed to paarse cart from localStorage:", error);
-                return [];
-            }
-            }
+        //     } catch (error) {
+        //         console.error("Failed to paarse cart from localStorage:", error);
+        //         return [];
+        //     }
+        //     }
                 
-            return cart;
-        });
+        //     return cart;
+        // });
 
         useEffect(() => {
         try {
