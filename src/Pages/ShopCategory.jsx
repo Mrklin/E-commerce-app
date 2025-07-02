@@ -2,15 +2,15 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import dropdown_icon from '../assets/Images/dropdown_icon.png'
 import Items from '../Components/Items'
-import UseSnapShot from '../Components/UseSnapShot'
-import arrow_icon from "../assets/Images/arrow.png"
+// import UseSnapShot from '../Components/UseSnapShot'
+// import arrow_icon from "../assets/Images/arrow.png"
 
 const ShopCategory = (props) => {
     const {all_product} = useContext(ShopContext)
 
-    const takeScreenShot =() =>{
-     UseSnapShot('snapShot', 'MyImage', 'image/jpeg')
-  }
+//     const takeScreenShot =() =>{
+//      UseSnapShot('snapShot', 'MyImage', 'image/jpeg')
+//   }
   return (
     <div id='snapShot'>
         <img src={props.banner} alt='banner_image' className='block mx-auto my-7 w-[82%]' />
@@ -43,8 +43,8 @@ const ShopCategory = (props) => {
          text-[#787878] font-medium text-[18px] cursor-pointer' >
             Explore More
         </div>
-        <button className=" flex items-center px-6 py-2 bg-black text-white cursor-pointer"
-                 onClick={takeScreenShot} >Take Shot <img className='w-[20px] h-[10px] ml-3' src={arrow_icon}/></button>
+        {/* <button className=" flex items-center px-6 py-2 bg-black text-white cursor-pointer"
+                 onClick={takeScreenShot} >Take Shot <img className='w-[20px] h-[10px] ml-3' src={arrow_icon}/></button> */}
     </div>
   )
 }
